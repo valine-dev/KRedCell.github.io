@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="zh" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pointa开发笔记 - KRedCell&#39;s Cafe</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="python,"> 
+    <meta name="description" content="Pointa开发笔记Pointa的github仓库
+Pointa的itch.io主页
+Part 0 - 总结当我写下这段文字的时候，Pointa的当前版本是v0.23-alpha，在这个版本里，Po,"> 
+    <meta name="author" content="RedCell"> 
+    <link rel="alternative" href="atom.xml" title="KRedCell&#39;s Cafe" type="application/atom+xml"> 
+    <link rel="icon" href="/img/fav.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">KRedCell&#39;s Cafe</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://kredcell.site">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Pointa开发笔记</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover-default.jpg);">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+                
+                February 04, 2020
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/02/04/Pointa%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" title="Pointa开发笔记" class="">Pointa开发笔记</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    43k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    39 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="Pointa开发笔记"><a href="#Pointa开发笔记" class="headerlink" title="Pointa开发笔记"></a>Pointa开发笔记</h1><p><a href="https://github.com/KRedCell/Pointa" target="_blank" rel="noopener">Pointa的github仓库</a></p>
+<p><a href="https://kredcell.itch.io/pointa" target="_blank" rel="noopener">Pointa的itch.io主页</a></p>
+<h2 id="Part-0-总结"><a href="#Part-0-总结" class="headerlink" title="Part 0 - 总结"></a>Part 0 - 总结</h2><p>当我写下这段文字的时候，Pointa的当前版本是<code>v0.23-alpha</code>，在这个版本里，Pointa的Windows客户端（Launcher）实现了自动更新，用ps脚本重写了启动器，封装成了exe文件，虽然代价是启动时的超长延迟（pip更新检测），总而言之，Pointa玩起来更方便了。从itch.io下载，解压，打开，链接服务器，就可以开始匹配，要是运气好服务器里有别的等待匹配玩家，游戏就能开始，这个版本同样相当于Pointa的alpha阶段开发结束。也相当于我的<strong>第一个</strong>标准意义上的开源项目步入正轨……</p>
+<p>这篇文字的标题我想了蛮久的，虽然在大部分人看来，比起现在的标题——“开发笔记”，这篇文章的内容更加偏重于叙述游戏机制的“设计”，而不是游戏实现的“开发”（即便这花的时间是最多的）。但仔细想想，对于游戏的“设计”，何尝不是一种“开发”？在况且Pointa所指，既可指作为一种桌游玩法的“Pointa!”，也自然可以指实现这个游戏的python库“Pointa”。</p>
+<p>Pointa玩的人多吗？不多，从第一个可玩版本发布到如今也就只有测试性的游玩，这也导致Pointa服务端的性能一直得不到测试（同样导致我无法判断到底应不应该重写pointa服务器的实现）。</p>
+<p>不过实际上这也没什么，我知道Pointa作为一个<strong>“实验性”</strong>的游戏会有什么下场，版本迭代的速度不快，早期版本公开过早，都算是造成Pointa没什么人玩的主要原因。</p>
+<h2 id="Part-1-Pointa缘起"><a href="#Part-1-Pointa缘起" class="headerlink" title="Part 1 - Pointa缘起"></a>Part 1 - Pointa缘起</h2><p>Pointa至始至终是一个游戏，一个实际上用纸和笔玩的<strong>游戏</strong>，在github上开发的，在itch.io上发布的，终究是Pointa的<strong>“实现”</strong>，Pointa的灵魂在于/doc/文件夹里面写着的规则书（这也是为什么我不厌其烦地在README里强调要去看一眼游戏规则书）。</p>
+<p>Pointa的起源其实意外地简单——两三个高一学生、一个期考后的晚自习、一个没有班主任的教室，我带着突然出现的奇想，用一张作文纸，和两支刻了刻度的6面铅笔（这也是为什么pointa规则里支持2d6），大概也就是在那十几分钟内，一个新游戏的原型就这么被设计了，名字叫做<strong>“Point Duel”</strong>。</p>
+<blockquote>
+<p>Fun fact，Pointa原(chui)定(bi)是在<strong>“一个周末内”</strong>完成，但从开始开发到<code>v0.1-alpha</code>的发布实际上用了<strong>“两周”</strong></p>
+</blockquote>
+<p>仔细回想，最初版的规则与现在的比较，区别还是不小的，例如：</p>
+<ul>
+<li>每个玩家每回合只能指定一个行动</li>
+<li>所有行动同时进行</li>
+<li>本回合roll出点数要延迟到下一回合才能补充，但如果这回合选择使用，就相当于放弃所roll点数向下回合pt属性补充（听上去十分复杂，对吧）</li>
+<li>同时死亡判定血量绝对值最大者失败（实际上这个规则甚至保留到了<code>v0.2-alpha</code>）</li>
+<li>支持两人以上混战（因为无法保证玩家阵营独立而取消）</li>
+<li>没有攻击判定</li>
+</ul>
+<p>经过了大概一天左右的设计迭代后，就写在我们设计这个游戏的草稿纸上，Pointa原型的第一个规则书完成了（与现在的规则书几乎无差）大概是这样的：</p>
+<blockquote>
+<h3 id="Pointa（Point-Duel）核心规则"><a href="#Pointa（Point-Duel）核心规则" class="headerlink" title="Pointa（Point Duel）核心规则"></a>Pointa（Point Duel）核心规则</h3><ul>
+<li><p>游戏分三个阶段，第一阶段2d6/1d12，记入玩家pt属性，第二阶段玩家<strong>独自</strong>向 攻击/防御/治疗 三个行动放入相应的值（从该玩家pt属性中抽取，0视为不作操作），第三阶段所有玩家所有行动（6个）按照分配的点数从少到多排序，同点数行动按照 治疗/防御/攻击 的顺序排列，顺序执行。</p>
+</li>
+<li><p>血量小于0即死亡，回合结束后死亡玩家判负，双方死亡则血量绝对值最大者失败。</p>
+</li>
+<li><p>攻击造成（a为攻击判定系数） a(0.3x^2) - 目标防御值 （向上取整，负数无效）点伤害。</p>
+</li>
+<li><p>防御增加0.25x^2（向上取整）点防御值</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+</blockquote>
+<p>可以说在原型里，Pointa的核心就已经确定了——<strong>在信息不对称的情况下抢夺行动顺序，争取最自己最有利的行动</strong>，因而，我愿意将Pointa描述为一个“需要策略、计算、运气和勇气的游戏”，而在<code>v0.21-alpha</code>引入的新失败判定机制（玩家在操作执行时便可判定死亡，最先死亡者失败）则是为了加深这一核心，Pointa的一切策略都是基于对<strong>己方最大输出、对方最大输出、对方最有可能的操作</strong>的判断基础上进行的（实际上在原型阶段我们就已经开发出来许多游戏策略，但都因为<code>v0.*-alpha</code>里的时间限制机制变得更加难以执行）。</p>
+<h2 id="Part-2-从import-random到Pointa-v0-1-alpha"><a href="#Part-2-从import-random到Pointa-v0-1-alpha" class="headerlink" title="Part 2 - 从import random到Pointa v0.1-alpha"></a>Part 2 - 从<code>import random</code>到<code>Pointa v0.1-alpha</code></h2><p>Pointa的技术框架从开始写下第一行代码到目前的版本，都没什么大变化，几乎是从写下第一行代码开始，“由可以支持多游戏同时进行的服务端提供服务，核心逻辑封装成类，交由服务器全权运算，服务器逻辑负责创建、储存、查询游戏。客户端通过向服务器发送请求同步本地游戏。”</p>
+<p>以下是当前版本<code>v0.23-alpha</code>的Pointa核心逻辑：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Pointa.py</span></span><br><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Player</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Player Class</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, key)</span>:</span></span><br><span class="line">        self.key = key</span><br><span class="line">        self.properties = &#123;</span><br><span class="line">            <span class="string">'hp'</span>: <span class="number">100</span>,</span><br><span class="line">            <span class="string">'pt'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'def'</span>: <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"># 0 = atk, 1 = def, 2 = hel</span></span><br><span class="line">        self.actions = &#123;</span><br><span class="line">            <span class="number">0</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="number">1</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="number">2</span>: <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        self.temp = &#123;&#125;</span><br><span class="line"></span><br><span class="line">        self.localVar = &#123;</span><br><span class="line">            <span class="string">'round'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'phase'</span>: <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">action</span><span class="params">(self, data)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> sum(list(data.values())) &gt; self.properties[<span class="string">'pt'</span>]:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        self.properties[<span class="string">'pt'</span>] -= sum(data.values())</span><br><span class="line">        self.actions = data</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">roundClear</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.properties[<span class="string">'def'</span>] = <span class="number">0</span></span><br><span class="line">        self.actions = &#123;</span><br><span class="line">            <span class="number">0</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="number">1</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="number">2</span>: <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">roll</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.temp[<span class="string">'roll'</span>] = random.randint(<span class="number">1</span>, <span class="number">12</span>)</span><br><span class="line">        self.properties[<span class="string">'pt'</span>] += self.temp[<span class="string">'roll'</span>]</span><br><span class="line">        <span class="keyword">return</span> self.temp[<span class="string">'roll'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">damage</span><span class="params">(self, pt)</span>:</span></span><br><span class="line">        <span class="string">'Interface Calculates the damage'</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Set a random judge number affacts actual damage</span></span><br><span class="line">        self.temp[<span class="string">'judge'</span>] = random.randint(<span class="number">1</span>, <span class="number">12</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Calculate the actual damage by the judge number and used pt</span></span><br><span class="line">        <span class="keyword">if</span> self.temp[<span class="string">'judge'</span>] <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">6</span>):</span><br><span class="line">            self.temp[<span class="string">'dmg'</span>] = math.ceil((<span class="number">0.30</span> * pow(pt, <span class="number">2</span>)) * <span class="number">0.5</span>)</span><br><span class="line">        <span class="keyword">elif</span> self.temp[<span class="string">'judge'</span>] <span class="keyword">in</span> range(<span class="number">6</span>, <span class="number">12</span>):</span><br><span class="line">            self.temp[<span class="string">'dmg'</span>] = math.ceil(<span class="number">0.30</span> * pow(pt, <span class="number">2</span>))</span><br><span class="line">        <span class="keyword">elif</span> self.temp[<span class="string">'judge'</span>] == <span class="number">12</span>:</span><br><span class="line">            self.temp[<span class="string">'dmg'</span>] = math.ceil((<span class="number">0.30</span> * pow(pt, <span class="number">2</span>)) * <span class="number">1.5</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Temporary stores the defense value</span></span><br><span class="line">        self.temp[<span class="string">'def'</span>] = self.properties[<span class="string">'def'</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Calculate the final defense value</span></span><br><span class="line">        self.properties[<span class="string">'def'</span>] = [</span><br><span class="line">            <span class="number">0</span>,</span><br><span class="line">            self.properties[<span class="string">'def'</span>] - self.temp[<span class="string">'dmg'</span>]</span><br><span class="line">        ][</span><br><span class="line">            self.properties[<span class="string">'def'</span>] &gt; self.temp[<span class="string">'dmg'</span>]</span><br><span class="line">        ]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Calculate the final damage to the player</span></span><br><span class="line">        self.temp[<span class="string">'dmg'</span>] = [</span><br><span class="line">            <span class="number">0</span>,</span><br><span class="line">            self.temp[<span class="string">'dmg'</span>] - self.temp[<span class="string">'def'</span>]</span><br><span class="line">        ][</span><br><span class="line">            self.temp[<span class="string">'dmg'</span>] &gt; self.temp[<span class="string">'def'</span>]</span><br><span class="line">        ]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Calculate the player's hp</span></span><br><span class="line">        self.properties[<span class="string">'hp'</span>] -= self.temp[<span class="string">'dmg'</span>]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Return the judge number ready to be caught by logger</span></span><br><span class="line">        <span class="keyword">return</span> self.temp[<span class="string">'judge'</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pointa</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Game Logics</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, p1, p2, loop)</span>:</span></span><br><span class="line">        self.players = &#123;</span><br><span class="line">            p1.key: p1,</span><br><span class="line">            p2.key: p2</span><br><span class="line">        &#125;</span><br><span class="line">        self.round = &#123;</span><br><span class="line">            <span class="string">'num'</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">'phase'</span>: <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        asyncio.events.set_event_loop(loop)</span><br><span class="line"></span><br><span class="line">        self.actions = []</span><br><span class="line">        self.temp = &#123;&#125;</span><br><span class="line">        self.log = []</span><br><span class="line"></span><br><span class="line">        self.status = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">settleRound</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.actions = []</span><br><span class="line">        <span class="comment"># Setp 1, Sort out the actions.</span></span><br><span class="line">        <span class="keyword">for</span> key, p <span class="keyword">in</span> self.players.items():</span><br><span class="line">            <span class="keyword">for</span> action, value <span class="keyword">in</span> p.actions.items():</span><br><span class="line">                self.actions.append(&#123;</span><br><span class="line">                    <span class="string">'own'</span>: key,</span><br><span class="line">                    <span class="string">'action'</span>: action,</span><br><span class="line">                    <span class="string">'value'</span>: value</span><br><span class="line">                &#125;)</span><br><span class="line">        self.actions.sort(key=<span class="keyword">lambda</span> x: (x[<span class="string">'value'</span>], -x[<span class="string">'action'</span>]))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Step 2, Take actions.</span></span><br><span class="line">        <span class="keyword">for</span> action <span class="keyword">in</span> self.actions:</span><br><span class="line">            <span class="comment"># Ignore null action</span></span><br><span class="line">            <span class="keyword">if</span> action[<span class="string">'value'</span>] != <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">if</span> action[<span class="string">'action'</span>] == <span class="number">0</span>:  <span class="comment"># Attack</span></span><br><span class="line">                    self.temp[<span class="string">'target'</span>] = list(filter(</span><br><span class="line">                        <span class="keyword">lambda</span> x: x[<span class="number">0</span>] != action[<span class="string">'own'</span>],</span><br><span class="line">                        self.players.items()</span><br><span class="line">                    ))[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">                    self.logger(</span><br><span class="line">                        action[<span class="string">'own'</span>],</span><br><span class="line">                        <span class="string">'atkJudge'</span>,</span><br><span class="line">                        self.temp[<span class="string">'target'</span>].damage(action[<span class="string">'value'</span>])</span><br><span class="line">                        )</span><br><span class="line">                    <span class="comment"># Check Player's hp</span></span><br><span class="line">                    <span class="keyword">if</span> self.temp[<span class="string">'target'</span>].properties[<span class="string">'hp'</span>] &lt;= <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">return</span> self.temp[<span class="string">'target'</span>]</span><br><span class="line"></span><br><span class="line">                <span class="keyword">elif</span> action[<span class="string">'action'</span>] == <span class="number">1</span>:  <span class="comment"># Defense</span></span><br><span class="line">                    self.players[</span><br><span class="line">                        action[<span class="string">'own'</span>]</span><br><span class="line">                    ].properties[</span><br><span class="line">                        <span class="string">'def'</span></span><br><span class="line">                    ] = math.ceil((<span class="number">0.25</span> * pow(action[<span class="string">'value'</span>], <span class="number">2</span>)))</span><br><span class="line"></span><br><span class="line">                <span class="keyword">elif</span> action[<span class="string">'action'</span>] == <span class="number">2</span>:  <span class="comment"># Healing</span></span><br><span class="line">                    self.players[</span><br><span class="line">                        action[<span class="string">'own'</span>]</span><br><span class="line">                    ].properties[</span><br><span class="line">                        <span class="string">'hp'</span></span><br><span class="line">                    ] += math.ceil(((<span class="number">0.35</span> * pow(action[<span class="string">'value'</span>], <span class="number">2</span>))))</span><br><span class="line"></span><br><span class="line">                    <span class="comment"># Make sure the healing action won't break the max health</span></span><br><span class="line">                    <span class="keyword">if</span> self.players[action[<span class="string">'own'</span>]].properties[<span class="string">'hp'</span>] &gt; <span class="number">100</span>:</span><br><span class="line">                        self.players[action[<span class="string">'own'</span>]].properties[<span class="string">'hp'</span>] = <span class="number">100</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">logger</span><span class="params">(self, actor, action, value)</span>:</span></span><br><span class="line">        self.log.append(</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">'time'</span>: int(round(time.time() * <span class="number">1000</span>)),</span><br><span class="line">                <span class="string">'actor'</span>: actor,</span><br><span class="line">                <span class="string">'action'</span>: action,</span><br><span class="line">                <span class="string">'value'</span>: value</span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getStat</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">'log'</span>: self.log,</span><br><span class="line">            <span class="string">'players'</span>: self.players,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">waitSync</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># Hanging the Emulator</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">not</span> (list(list(self.players.items())[<span class="number">0</span>][<span class="number">1</span>].localVar.values()) <span class="keyword">and</span> list(list(self.players.items())[<span class="number">1</span>][<span class="number">1</span>].localVar.values()) == list(self.round.values())):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">'Main game Emulator'</span></span><br><span class="line">        self.round[<span class="string">'num'</span>] += <span class="number">1</span></span><br><span class="line">        self.logger(<span class="string">'game'</span>, <span class="string">'roundBegin'</span>, self.round[<span class="string">'num'</span>])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Phase 1 - Roll the points</span></span><br><span class="line">        self.round[<span class="string">'phase'</span>] = <span class="number">1</span></span><br><span class="line">        self.logger(<span class="string">'game'</span>, <span class="string">'phaseBegin'</span>, self.round)</span><br><span class="line">        <span class="keyword">for</span> key, p <span class="keyword">in</span> self.players.items():</span><br><span class="line">            self.logger(key, <span class="string">'pointRolled'</span>, p.roll())</span><br><span class="line">        <span class="comment"># Wait For Client Sync</span></span><br><span class="line">        self.waitSync()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Phase 2 - Wait for the actions</span></span><br><span class="line">        self.round[<span class="string">'phase'</span>] = <span class="number">2</span></span><br><span class="line">        self.logger(<span class="string">'game'</span>, <span class="string">'phaseBegin'</span>, self.round)</span><br><span class="line">        <span class="keyword">await</span> asyncio.sleep(<span class="number">25</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Phase 3 - Calculate the actions</span></span><br><span class="line">        result = self.settleRound()</span><br><span class="line"></span><br><span class="line">        self.round[<span class="string">'phase'</span>] = <span class="number">3</span></span><br><span class="line">        self.logger(<span class="string">'game'</span>, <span class="string">'phaseBegin'</span>, self.round)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Wait For Client Sync</span></span><br><span class="line">        self.waitSync()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Step 3, Clear the actions and wait for next Cauculating</span></span><br><span class="line">        <span class="keyword">for</span> key, p <span class="keyword">in</span> self.players.items():</span><br><span class="line">            p.roundClear()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> result != <span class="number">0</span>:  <span class="comment"># Somebody dead</span></span><br><span class="line">            self.logger(<span class="string">'game'</span>, <span class="string">'playerKilled'</span>, result.key)</span><br><span class="line">            self.logger(<span class="string">'game'</span>, <span class="string">'gameEnd'</span>, <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> self.log  <span class="comment"># Stop Coro</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Next Round</span></span><br><span class="line">        <span class="keyword">await</span> self.main()</span><br></pre></td></tr></table></figure>
+
+<p>有点长，总共200多行，包含了一个Player类和一个Pointa类，按照现在的服务器逻辑——服务器收到游戏开始的请求，将双方玩家封装成Player类传入Pointa类，以两名玩家的标识组成键值对应游戏实例，服务器读取Pointa里的Log，处理后和玩家信息一起传回客户端让客户端更新，Pointa内一切操作通过操控Player类变量实现。</p>
+<p>从这个文件，到<code>v0.1-alpha</code>，用了两周。为什么？因为最早的版本，同样也是最复杂的，再加上Pointa的开发实际上触及到了许多我之前根本没有涉猎过的区域（Python的异步），自然导致开发时间的指数级增长。</p>
+<h3 id="Async-IO"><a href="#Async-IO" class="headerlink" title="Async IO"></a>Async IO</h3><p>首先遇到的，也是最耗时的，是去理解python的异步库，或许是我第一次接触异步是在js（即便也是一知半解），导致我对python的异步处理几乎是“完全无法理解”，官方文档看不懂，网络的教程也不是很能解决问题（即便是现在我也不敢说我“理解”了python的异步库，最多就是“能用”异步库解决小部分的问题）。</p>
+<p>运行Pointa服务，要求的是一个能够动态地添加、删除Pointa主模拟器（main方法协程）的事件循环，网上的大部分方案都集中在添加callback这一方法上，但添加callback总听上去不像那么回事，于是在经过了深入的搜索后，一个更加神奇的解决方案出现了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DynamicEventLoop</span>:</span></span><br><span class="line">    <span class="string">'''Creating a thread runs the event loop that can insert coroutine dynamically.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        self,</span></span></span><br><span class="line"><span class="function"><span class="params">        loop: asyncio.AbstractEventLoop = None,</span></span></span><br><span class="line"><span class="function"><span class="params">        thread: threading.Thread = None</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span>:</span></span><br><span class="line">        <span class="string">'Define a loop and run it in a seperate thread'</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Creating Event Loop</span></span><br><span class="line">        <span class="keyword">if</span> loop <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            self.loop = loop</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                self.loop = asyncio.get_event_loop()</span><br><span class="line">            <span class="keyword">except</span> RuntimeError:</span><br><span class="line">                self.loop = asyncio.new_event_loop()</span><br><span class="line">                asyncio.set_event_loop(self.loop)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Creating thread</span></span><br><span class="line">        <span class="keyword">if</span> thread <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            self.thread = thread</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.thread = threading.Thread(</span><br><span class="line">                target=<span class="keyword">lambda</span> x: x.run_forever(),</span><br><span class="line">                args=(self.loop,)</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">        self.taskList = &#123;&#125;</span><br><span class="line">        self.temp = [<span class="literal">None</span>, <span class="literal">None</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">'Starting Event Loop'</span></span><br><span class="line">        self.thread.start()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">append</span><span class="params">(self, mark, coroutine)</span>:</span></span><br><span class="line">        <span class="string">'''Returns the list of tasks</span></span><br><span class="line"><span class="string">        Append a coroutine to eventloop</span></span><br><span class="line"><span class="string">        mark can be **Anything**</span></span><br><span class="line"><span class="string">        coroutine should be a coroutine</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        self.taskList.update(</span><br><span class="line">            &#123;</span><br><span class="line">                mark: self.loop.create_task(coroutine)</span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">        <span class="comment"># Send updated signal to loop</span></span><br><span class="line">        self.loop._csock.send(<span class="string">b'\0'</span>)</span><br><span class="line">        <span class="keyword">return</span> self.taskList</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self, mark)</span>:</span></span><br><span class="line">        <span class="string">'''Returns the result of the marked task</span></span><br><span class="line"><span class="string">        Delete the marked task in loop'''</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.taskList.pop(mark).cancel()  <span class="comment"># Cancel the task</span></span><br><span class="line">        <span class="keyword">except</span> KeyError:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'Incorrect Mark!'</span></span><br></pre></td></tr></table></figure>
+
+<p>上面是Pointa服务器使用的DEL——<strong>“不知道该怎么取名字而取的名字”</strong>——类，是的，这个解决方案被我封装在了这个类里面，但究其核心，其实就是一行代码——</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.loop._csock.send(<span class="string">b'\0'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>原理，我自然是一知半解，但它确实是有用的，也给了我一个将事件循环封装起来的思路。至此，异步库的问题才算了“大概”解决了。</p>
+<h3 id="HTTP-Socket"><a href="#HTTP-Socket" class="headerlink" title="HTTP ? Socket ?"></a>HTTP ? Socket ?</h3><p>我知道，这个小标题听上去绝对怪得要死——HTTP和Socket就不是一回事啊！结合上面的低技术力发言和规范性、可读性为0的代码，这篇文章应该已经把多数大佬给气走了。（我们应该庆幸github打不了差评）</p>
+<p>但我当时确实是在思考这个问题——那时的Point客户端预计是使用Unity写成的（也已经写了不少，虽然在后面的更新中被移除了），我的是需要一个通用的，能满足Pointa的网络传输方式，最早的版本中（可以在Commit中查看到），Pointa服务端和客户端是直接使用socket交流的。</p>
+<p>但直接基于socket的客户端/服务端终究没有写完，究其原因，最主要的便是socket高层封装API确实不多（python中仅仅有服务端的抽象库<code>socketserver</code>）导致许多有用的特性例如异步处理请求都需要自己手动实现，并且socket全双工的特性在Pointa的网络传输中确实没有特别重要的作用（现在使用的HTTP轮询机制进一步优化便可以大幅度减少请求数量）</p>
+<p>并且，Python的HTTP开发环境成熟，并且Pointa的网络传输是可以用请求-响应模型实现的，因而Pointa就转向了基于HTTP协议的开发。</p>
+<p>经过了大约两到三天的debug，第一个版本的Pointa——<code>v0.1-alpha</code>发布了。</p>
+<h2 id="Part-3-从v0-2-alpha到未来……"><a href="#Part-3-从v0-2-alpha到未来……" class="headerlink" title="Part 3 - 从v0.2-alpha到未来……"></a>Part 3 - 从<code>v0.2-alpha</code>到未来……</h2><p>在第一场远程的Pointa游戏结束的那一刻（即便是在本机进行的），我几乎是兴奋地跳了起来，开发结束后的第一刻，github上就出现了Pointa的第一个发行版本——<code>v0.1-alpha</code>，拥有一个测试版的CLI客户端，基于<code>Flask</code>的服务端和基于<code>Gevent</code>的生产运行环境（实际上服务端的技术栈到现在也没有什么变化）。</p>
+<p>但问题也很明显，客户端太不友好了——杂乱的输出、助记符等级的输入提示、直接显示服务端发来的原生结果，但直接编写基于Unity的客户端十分不现实（尤其是当时我确实没有没有素材可用），于是下一个版本的目标——重写客户端，其成果也自然被预计为一个同样是基于CLI的客户端。</p>
+<blockquote>
+<p>Fun fact，Pointa的<code>v0.2-alpha</code>到<code>v0.23-alpha</code>是一天一个版本</p>
+</blockquote>
+<p>新客户端的进行异常顺利，几乎是一天下来就完成了，这是Pointa的<code>v0.2-alpha</code>所加入的：</p>
+<ul>
+<li>可拓展的多语言支持</li>
+<li>更加好看的输出</li>
+<li>支持用户名（这点甚至波及了服务器）</li>
+</ul>
+<p>总的而言，在这个版本里，Pointa更像个游戏了，它不再是一堆测试性的代码，而是有标准输入、输出，有一定健壮性（不会因为几个错误的输入而发生致命错误），在这个版本里，我也重写了Readme文件（感谢标准README库），重新组织文档，这也使得Pointa在另一方面看上去更像一个“开源项目”了，自然也获得了几颗珍贵的Star（感谢群友大佬的鼎力支持）以及开发，试玩的宝贵意见，这也使得我有了继续开发Pointa的信心。</p>
+<p>从<code>v0.21-alpha</code>到<code>v0.23-alpha</code>的更新，除去BUG修复，大致是这样的：</p>
+<ul>
+<li>玩家断线后会从服务器名单中剔除</li>
+<li>新的判负方式</li>
+<li>不再输出没有赋值的操作</li>
+<li>服务器仅在第三阶段返回双方操作</li>
+<li>服务器运行端口可通过标准配置文件配置</li>
+<li>Windows专用的客户端（预安装了python环境）上线（同时上线itch.io）</li>
+<li>匹配机制</li>
+<li>Windows客户端启动器被打包为exe</li>
+</ul>
+<p>越来越多东西被加进来，虽然跟Pointa的核心机制没什么关系，但都让Pointa更像一个游戏。</p>
+<h3 id="未来？……"><a href="#未来？……" class="headerlink" title="未来？……"></a>未来？……</h3><p>Pointa到<code>v0.23-alpha</code>告一段落，我也准备要开学了，之后的开发很大程度上就要看情况了，Pointa很有可能没有未来，以后也有可能会是像这样没几个人玩，但谁又在乎呢？Pointa的更新照样会做，我也会继续无偿地向这个游戏注入心血——</p>
+<blockquote>
+<p>未来开发计划</p>
+<ul>
+<li>模块化的游戏进程，可以在游戏内插入更多玩法模组</li>
+<li>两人以上的游戏体验</li>
+<li>Unity客户端</li>
+</ul>
+</blockquote>
+<p>即便没人愿意玩，但我也会去这么做，因为这足够有趣，当然，最重要的是</p>
+<h1 id="我乐意"><a href="#我乐意" class="headerlink" title="我乐意"></a><strong>我乐意</strong></h1><p>Red_Cell</p>
+<p>2020/2/4</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/Fragments_of_time.mp3'></li>
+                
+                    
+                
+                <li title='1' data-url='/statics/Da_Funk.mp3'></li>
+                
+                    
+                
+                <li title='2' data-url='/statics/Get_Lucky.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='42b418fc538bdc393ade'
+        data-cs='146f2d0d820f3e6b12aafee0038f2657045c1e99'
+        data-r='KRedCell.github.io'
+        data-o='KRedCell'
+        data-a='KRedCell'
+        data-d=''
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://pbs.twimg.com/profile_images/1221838572812038144/Pdm1tgV7_400x400.jpg" height=300 width=300></img>
+                    <p>RedCell</p>
+                    <span>Art Ambition Creative Passion</span>
+                    <dl>
+                        <dd><a href="https://github.com/KRedCell" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/krovRedCell" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">3 <p>Articles</p></a></li>
+                    <li><a href="/categories">1 <p>Categories</p></a></li>
+                    <li><a href="/tags">1 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Pointa开发笔记"><span class="toc-number">1.</span> <span class="toc-text">Pointa开发笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Part-0-总结"><span class="toc-number">1.1.</span> <span class="toc-text">Part 0 - 总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part-1-Pointa缘起"><span class="toc-number">1.2.</span> <span class="toc-text">Part 1 - Pointa缘起</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pointa（Point-Duel）核心规则"><span class="toc-number">1.2.1.</span> <span class="toc-text">Pointa（Point Duel）核心规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part-2-从import-random到Pointa-v0-1-alpha"><span class="toc-number">1.3.</span> <span class="toc-text">Part 2 - 从import random到Pointa v0.1-alpha</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Async-IO"><span class="toc-number">1.3.1.</span> <span class="toc-text">Async IO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-Socket"><span class="toc-number">1.3.2.</span> <span class="toc-text">HTTP ? Socket ?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part-3-从v0-2-alpha到未来……"><span class="toc-number">1.4.</span> <span class="toc-text">Part 3 - 从v0.2-alpha到未来……</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#未来？……"><span class="toc-number">1.4.1.</span> <span class="toc-text">未来？……</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#我乐意"><span class="toc-number">2.</span> <span class="toc-text">我乐意</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            RedCell
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+
+    
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+
+
+
+    
+<script src="/js/busuanzi.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            if ($('span[id^="busuanzi_"]').length) {
+                initialBusuanzi();
+            }
+        });
+    </script>
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Art Ambition Creative Passion", "艺术 雄心 创造 激情"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+
+
+</html>
